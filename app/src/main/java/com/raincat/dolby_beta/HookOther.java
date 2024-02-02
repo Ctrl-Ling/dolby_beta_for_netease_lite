@@ -85,7 +85,7 @@ public class HookOther {
                             //黑胶
                             if (SettingHelper.getInstance().isEnable(SettingHelper.black_key)) {
                                 new BlackHook(context, versionCode);
-                                deleteAdAndTinker();
+                                //deleteAdAndTinker();
                             }
                             //不变灰
                             new GrayHook(context);
