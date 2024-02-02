@@ -55,7 +55,7 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
  */
 
 public class Hook {
-    private final static String PACKAGE_NAME = "com.netease.cloudmusic";
+    private final static String PACKAGE_NAME = "com.neteaselite.cloudmusic";
     //进程初始化状态
     public boolean playProcessInit = false;
     public boolean mainProcessInit = false;
@@ -67,7 +67,7 @@ public class Hook {
     public static final String msg_send_notification = "sendNotification";
 
     public Hook(XC_LoadPackage.LoadPackageParam lpparam) {
-        XposedHelpers.findAndHookMethod(XposedHelpers.findClass("com.netease.cloudmusic.NeteaseMusicApplication", lpparam.classLoader),
+        XposedHelpers.findAndHookMethod(XposedHelpers.findClass("com.neteaselite.cloudmusic.NeteaseMusicApplication", lpparam.classLoader),
                 "attachBaseContext", Context.class, new XC_MethodHook() {
                     @Override
                     protected void afterHookedMethod(MethodHookParam param) throws Throwable {
@@ -197,7 +197,7 @@ public class Hook {
     private void deleteAdAndTinker() throws IOException {
         //广告缓存路径
         String CACHE_PATH = Environment.getExternalStorageDirectory() + "/netease/cloudmusic/Ad";
-        String CACHE_PATH2 = Environment.getExternalStorageDirectory() + "/Android/data/com.netease.cloudmusic/cache/Ad";
+        String CACHE_PATH2 = Environment.getExternalStorageDirectory() + "/Android/data/com.neteaselite.cloudmusic/cache/Ad";
 
         String TINKER_PATH = "data/data/" + PACKAGE_NAME + "/tinker";
 
