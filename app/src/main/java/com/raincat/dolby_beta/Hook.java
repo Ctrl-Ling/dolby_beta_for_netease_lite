@@ -67,7 +67,7 @@ public class Hook {
     public static final String msg_send_notification = "sendNotification";
 
     public Hook(XC_LoadPackage.LoadPackageParam lpparam) {
-        XposedHelpers.findAndHookMethod(XposedHelpers.findClass("com.neteaselite.cloudmusic.NeteaseMusicApplication", lpparam.classLoader),
+        XposedHelpers.findAndHookMethod(XposedHelpers.findClass("com.netease.cloudmusic.NeteaseMusicApplication", lpparam.classLoader),
                 "attachBaseContext", Context.class, new XC_MethodHook() {
                     @Override
                     protected void afterHookedMethod(MethodHookParam param) throws Throwable {
