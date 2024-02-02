@@ -55,7 +55,7 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage;
  */
 
 public class Hook {
-    private final static String PACKAGE_NAME = "com.neteaselite.cloudmusic";
+    private final static String PACKAGE_NAME = "com.netease.cloudmusic";
     int versionCode = 0;
     //进程初始化状态
     public boolean playProcessInit = false;
@@ -199,7 +199,7 @@ public class Hook {
     private void deleteAdAndTinker() throws IOException {
         //广告缓存路径
         String CACHE_PATH = Environment.getExternalStorageDirectory() + "/netease/cloudmusic/Ad";
-        String CACHE_PATH2 = Environment.getExternalStorageDirectory() + "/Android/data/com.neteaselite.cloudmusic/cache/Ad";
+        String CACHE_PATH2 = Environment.getExternalStorageDirectory() + "/Android/data/com.netease.cloudmusic/cache/Ad";
 
         String TINKER_PATH = "data/data/" + PACKAGE_NAME + "/tinker";
 
