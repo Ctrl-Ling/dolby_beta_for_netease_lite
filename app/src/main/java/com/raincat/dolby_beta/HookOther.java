@@ -61,7 +61,7 @@ public class HookOther {
                     @Override
                     protected void afterHookedMethod(MethodHookParam param) throws Throwable {
                         final Context context = (Context) param.thisObject;
-                        if(PACKAGE_NAME.equals("com.neteaselite.cloudmusic"))
+                        if(PACKAGE_NAME.equals("com.netease.cloudmusic.lite"))
                         {
                             versionCode = 7002022;
                         }else {
