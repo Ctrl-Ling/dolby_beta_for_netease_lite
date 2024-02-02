@@ -4,6 +4,6 @@
     <string name="xposed_description">模块无界面，设置已内嵌到“网易云音乐->设置”中</string>
 
     <string-array name="package_scope">
-        <item>com.neteaselite.cloudmusic</item>
+        <item>com.netease.cloudmusic.lite</item>
     </string-array>
 </resources>
