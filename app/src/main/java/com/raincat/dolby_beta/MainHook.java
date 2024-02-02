@@ -20,10 +20,10 @@ import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam;
 public class MainHook implements IXposedHookLoadPackage, IXposedHookZygoteInit {
     @Override
     public void handleLoadPackage(final LoadPackageParam lpparam) throws Exception {
-        if (!TextUtils.isEmpty(lpparam.packageName) && lpparam.packageName.equals("com.neteaselite.cloudmusic")) {
+        if (!TextUtils.isEmpty(lpparam.packageName) && lpparam.packageName.equals("com.netease.cloudmusic")) {
 //            HotXposed.hook(HookerDispatcher.class, lpparam);
                 new Hook(lpparam);
-        }else if (!TextUtils.isEmpty(lpparam.packageName) && lpparam.packageName.equals("com.netease.cloudmusic.lite")) {
+        }else if (!TextUtils.isEmpty(lpparam.packageName) && lpparam.packageName.equals("com.neteaselite.cloudmusic")) {
             new HookOther(lpparam);
         }else if (!TextUtils.isEmpty(lpparam.packageName) && lpparam.packageName.equals("com.hihonor.cloudmusic")) {
             new HookOther(lpparam);
