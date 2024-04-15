@@ -107,10 +107,10 @@ public class ProxyHook {
             });
         }
 
-        if (!isPlayProcess)
-            findAndHookMethod("com.netease.cloudmusic.activity.LoadingActivity", context.getClassLoader(), "onCreate", Bundle.class, new XC_MethodHook() {
-                @Override
-                protected void afterHookedMethod(MethodHookParam param) {
+        if (!isPlayProcess){
+            //findAndHookMethod("com.netease.cloudmusic.activity.LoadingActivity", context.getClassLoader(), "onCreate", Bundle.class, new XC_MethodHook() {
+                //@Override
+                //protected void afterHookedMethod(MethodHookParam param) {
                     ExtraHelper.setExtraDate(ExtraHelper.SCRIPT_STATUS, "0");
                     if (SettingHelper.getInstance().getSetting(SettingHelper.proxy_master_key)) {
                         ScriptHelper.initScript(context, false);
@@ -120,8 +120,9 @@ public class ProxyHook {
                             ScriptHelper.startScript();
                         }
                     }
-                }
-            });
+                //}
+            //});
+        }
     }
 
     /**
