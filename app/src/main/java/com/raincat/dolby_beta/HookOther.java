@@ -63,7 +63,7 @@ public class HookOther {
                         final Context context = (Context) param.thisObject;
                         if(PACKAGE_NAME.equals("com.netease.cloudmusic.lite"))
                         {
-                            versionCode = 140;
+                            versionCode = 7002022;
                         }else {
                             versionCode = 8010050;
                         }
@@ -165,7 +165,7 @@ public class HookOther {
 
     private void deleteAdAndTinker() throws IOException {
         //广告缓存路径
-        String CACHE_PATH3 = Environment.getExternalStorageDirectory() + "/netease/cloudmusic/lite/Ad";
+        String CACHE_PATH3 = Environment.getExternalStorageDirectory() + "/netease/cloudmusic/Ad";
         if(PACKAGE_NAME.equals("com.hihonor.cloudmusic"))
         {
             CACHE_PATH3 = Environment.getExternalStorageDirectory() + "/hihonor/cloudmusic/Ad";
