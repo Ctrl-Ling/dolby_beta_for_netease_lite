@@ -72,7 +72,8 @@ public class Hook {
                     @Override
                     protected void afterHookedMethod(MethodHookParam param) throws Throwable {
                         final Context context = (Context) param.thisObject;
-                        final int versionCode = context.getPackageManager().getPackageInfo(PACKAGE_NAME, 0).versionCode;
+                        //final int versionCode = context.getPackageManager().getPackageInfo(PACKAGE_NAME, 0).versionCode;
+                        versionCode = 7002022;
                         //初始化仓库
                         ExtraHelper.init(context);
                         //初始化设置
@@ -149,8 +150,8 @@ public class Hook {
                                         playProcessInit = true;
                                         if (mainProcessInit && playProcessInit)
                                             context.sendBroadcast(new Intent(msg_hook_play_process));
-                                    } else if (msg_send_notification.equals(intent.getAction())
-                                            && SettingHelper.getInstance().isEnable(SettingHelper.warn_key)) {
+                                    } else if (msg_send_notification.equals(intent.getAction()) ){
+                                            //&& SettingHelper.getInstance().isEnable(SettingHelper.warn_key)) {
                                         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
                                             NotificationHelper.getInstance(context).sendUnLockNotification(context, intent.getIntExtra("code", 0x10),
                                                     intent.getStringExtra("title"), intent.getStringExtra("title"), intent.getStringExtra("message"));
