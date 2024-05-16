@@ -73,7 +73,7 @@ public class Hook {
                     protected void afterHookedMethod(MethodHookParam param) throws Throwable {
                         final Context context = (Context) param.thisObject;
                         //final int versionCode = context.getPackageManager().getPackageInfo(PACKAGE_NAME, 0).versionCode;
-                        versionCode = 7002022;
+                        final int versionCode = 7002022;
                         //初始化仓库
                         ExtraHelper.init(context);
                         //初始化设置
